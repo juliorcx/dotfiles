@@ -1,0 +1,27 @@
+wifi(){
+	echo $(ip route get 8.8.8.8 2>/dev/null|grep -Eo 'src [0-9.]+'|grep -Eo '[0-9.]+')
+}
+
+print_cpu_used(){
+#echo $(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}')
+    echo $(cat /proc/loadavg | awk '{print $1}')
+}
+
+print_temp(){
+	echo $(acpi -t | awk '/^T/ {print $4}')°C
+}
+
+print_bat(){
+	test -f /sys/class/power_supply/BAT1/capacity || return 0
+	echo $(head -c 2 /sys/class/power_supply/BAT1/capacity)%
+}
+
+print_date(){
+#date +"%d-%m-%y %H:%M "
+    date +"%m.%d.%H.%M.%Y"
+}
+
+while true; do
+	xsetroot -name " $(print_cpu_used) | $(print_temp) | $(wifi) | $(print_bat) | $(print_date)"
+   	sleep 1.0000    # Update time every second
+done
