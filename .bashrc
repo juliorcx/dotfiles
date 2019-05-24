@@ -1,4 +1,4 @@
-# .bashrc
+#!/bin/bash
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -14,3 +14,9 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput se
 
 # nnn config
 export NNN_USE_EDITOR=1
+
+# Define defaults
+
+export TERMINAL="st"
+export BROWSER="firefox"
+export READER="zathura"

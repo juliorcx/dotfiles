@@ -4,7 +4,7 @@ wifi(){
 
 print_cpu_used(){
 #echo $(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}')
-    echo $(cat /proc/loadavg | awk '{print $1}')
+    echo $(cat /proc/loadavg | awk '{print $1}') # cpuLoad
 }
 
 print_temp(){
@@ -17,8 +17,8 @@ print_bat(){
 }
 
 print_date(){
-#date +"%d-%m-%y %H:%M "
-    date +"%m.%d.%H.%M.%Y"
+    date +"%a %m-%d %H:%M"
+#date +"%m.%d.%H.%M.%Y"
 }
 
 while true; do
