@@ -1,6 +1,5 @@
 #!/bin/sh
 
-#sessions=$(tmux ls | grep '^[0-9]\+:' | cut -f1 -d':' | sort)
 sessions=$(tmux ls | awk '{print $1}' | cut -f1 -d':' | sort)
 
 new=1
