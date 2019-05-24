@@ -1,0 +1,20 @@
+#!/bin/sh
+
+alias p='python'
+alias v='vim'
+alias ls="ls --color=auto"
+alias l='ls -a'
+alias ll='ls -la'
+alias nf='clear && neofetch'
+alias upd='sudo emerge --update --deep --with-bdeps=y --newuse @world'
+alias updc="sudo emerge --ask --changed-use --deep @world"
+alias n="nnn"
+alias m="neomutt"
+alias sm='offlineimap'
+alias r='R --vanilla'
+alias rr='sudo R --vanilla'
+alias rocket='java -jar ~/Desktop/OpenRocket-15.03.jar'
+alias wifi='sudo iw dev wlan0 connect -w' # if it is open network!
+alias tls='tmux ls'
+alias ks='tmux kill-session -t'
+alias ac='vim ~/.private/accounts'

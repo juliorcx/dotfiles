@@ -1,0 +1,41 @@
+# GIMP gimprc
+# 
+# This is your personal gimprc file.  Any variable defined in this file takes
+# precedence over the value defined in the system-wide gimprc:
+# /etc/gimp/2.0/gimprc
+# Most values can be set within GIMP by changing some options in the
+# Preferences dialog.
+
+(color-management
+    (mode off)
+    (display-profile-from-gdk no)
+    (display-rendering-intent perceptual)
+    (display-use-black-point-compensation yes)
+    (display-optimize yes)
+    (simulation-rendering-intent perceptual)
+    (simulation-use-black-point-compensation no)
+    (simulation-optimize yes)
+    (simulation-gamut-check no)
+    (out-of-gamut-color (color-rgb 0.501961 0.501961 0.501961))
+    (display-module "CdisplayLcms"))
+(import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/gimp-org-file-raw-placeholder/gimp-org-file-raw-placeholder")
+(monitor-xresolution 102.000000)
+(monitor-yresolution 103.000000)
+(fill-options
+    (style solid)
+    (antialias yes))
+(stroke-options
+    (style solid)
+    (antialias yes)
+    (method line)
+    (width 1.000000)
+    (unit pixels)
+    (cap-style butt)
+    (join-style miter)
+    (miter-limit 8.000000)
+    (dash-offset 0.000000)
+    (dash-info 0)
+    (emulate-brush-dynamics no))
+
+
+# end of gimprc

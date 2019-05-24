@@ -1,0 +1,9 @@
+# Basic binds
+super + Return
+        $TERMINAL -e tmux
+super + m
+        $TERMINAL -e neomutt
+super + n
+        $TERMINAL -e nnn
+super + w
+        $BROWSER
