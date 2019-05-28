@@ -1,9 +1,42 @@
+#     _       _ _         ____   ____
+#    | |_   _| (_) ___   |  _ \ / ___|_  __
+# _  | | | | | | |/ _ \  | |_) | |   \ \/ /
+#| |_| | |_| | | | (_) | |  _ <| |___ >  <
+# \___/ \__,_|_|_|\___/  |_| \_\\____/_/\_\
+
+
 # Basic binds
-super + Return
-        $TERMINAL -e tmux
 super + m
         $TERMINAL -e neomutt
 super + n
         $TERMINAL -e nnn
 super + w
         $BROWSER
+super + r
+        $TERMINAL -e R --vanilla
+
+# _____ __  __ _   ___  __
+#|_   _|  \/  | | | \ \/ /
+#  | | | |\/| | | | |\  /
+#  | | | |  | | |_| |/  \
+#  |_| |_|  |_|\___//_/\_\
+
+# ~~~ Window nav ~~~
+super + 1
+        tmux select-window -t :=1
+super + 2
+        tmux select-window -t :=2
+super + 3
+        tmux select-window -t :=3
+super + 4
+        tmux select-window -t :=4
+super + 5
+        tmux select-window -t :=5
+super + 6
+        tmux select-window -t :=6
+super + 7
+        tmux select-window -t :=7
+super + 8
+        tmux select-window -t :=8
+super + 9
+        tmux select-window -t :=9
