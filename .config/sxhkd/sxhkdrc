@@ -40,3 +40,7 @@ super + 8
         tmux select-window -t :=8
 super + 9
         tmux select-window -t :=9
+
+# ~~~ Kill-window ~~~
+super + shift + q
+        tmux confirm-before -p "kill-window #W? (y/n)" kill-window
